@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PaymentScreenActivity">
+
+    <TextView
+        android:id="@+id/tvMarkaveOdeme"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="24dp"
+        android:gravity="center"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/etKartNo"
+        android:layout_width="346dp"
+        android:layout_height="54dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="26dp"
+        android:ems="10"
+        android:hint="Kart No :"
+        android:inputType="number"
+        android:maxLength="16"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etAdres" />
+
+    <EditText
+        android:id="@+id/etKartYil"
+        android:layout_width="75dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Yıl"
+        android:inputType="number"
+        android:maxLength="2"
+        app:layout_constraintBottom_toBottomOf="@+id/etKartAy"
+        app:layout_constraintStart_toEndOf="@+id/textView2"
+        app:layout_constraintTop_toTopOf="@+id/etKartAy" />
+
+    <EditText
+        android:id="@+id/etKartAy"
+        android:layout_width="75dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="30dp"
+        android:ems="10"
+        android:hint="Ay"
+        android:inputType="number"
+        android:maxLength="2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etKartNo" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="/"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="@+id/etKartAy"
+        app:layout_constraintStart_toEndOf="@+id/etKartAy"
+        app:layout_constraintTop_toTopOf="@+id/etKartAy" />
+
+    <EditText
+        android:id="@+id/etKartCvv"
+        android:layout_width="94dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="44dp"
+        android:ems="10"
+        android:hint="CVV"
+        android:inputType="number"
+        android:maxLength="3"
+        app:layout_constraintBottom_toBottomOf="@+id/etKartYil"
+        app:layout_constraintStart_toEndOf="@+id/etKartYil"
+        app:layout_constraintTop_toTopOf="@+id/etKartYil" />
+
+    <Button
+        android:id="@+id/btnOdeme"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:text="ÖDE"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etKartYil" />
+
+    <EditText
+        android:id="@+id/etTcKimlik"
+        android:layout_width="346dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="42dp"
+        android:ems="10"
+        android:hint="Tc Kimlik"
+        android:inputType="number"
+        android:maxLength="11"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvMarkaveOdeme" />
+
+    <EditText
+        android:id="@+id/etAdres"
+        android:layout_width="346dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="38dp"
+        android:ems="10"
+        android:hint="Adres"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etTcKimlik" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
